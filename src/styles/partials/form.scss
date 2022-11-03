@@ -1,0 +1,36 @@
+form {
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #bababa;
+    border-radius: 0;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #031139;
+    outline: none;
+    border-radius: 0;
+
+    &:focus {
+      border-color: #14438b;
+    }
+
+    &.ng-invalid {
+      border-color: #d40504;
+    }
+  }
+
+  .form-error-message {
+    color: #d40504;
+    font-weight: lighter;
+  }
+}

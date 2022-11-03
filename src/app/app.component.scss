@@ -1,0 +1,15 @@
+main {
+  max-width: 450px;
+  margin: 100px auto 0 auto;
+  border: 2px solid #051039;
+  padding: 40px;
+
+  color: #051039;
+  font-size: 16px;
+
+  @media only screen and (max-width: 595px) {
+    margin-top: 20px;
+    border: none;
+    padding: 30px;
+  }
+}

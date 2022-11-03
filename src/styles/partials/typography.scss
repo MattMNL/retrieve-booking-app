@@ -1,0 +1,38 @@
+html body {
+  .header-title {
+    margin: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  .main-hero {
+    position: relative;
+    margin-bottom: 60px;
+    color: #003145;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 45px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: auto;
+      right: 47%;
+      bottom: -30px;
+      width: 30px;
+      height: 5px;
+      background-color: #003145;
+    }
+  }
+
+  .text-lead {
+    font-size: 22px;
+    margin-bottom: 40px;
+    line-height: 32px;
+    font-weight: lighter;
+  }
+}

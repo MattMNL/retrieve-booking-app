@@ -1,0 +1,48 @@
+<form [formGroup]="retrieveBookingForm" (ngSubmit)="onSubmit()">
+  <label>
+    Booking code
+    <input type="text" formControlName="bookingCode" />
+
+    <p
+      class="form-error-message"
+      *ngIf="bookingCodeControlErrors?.['minlength']"
+    >
+      Booking code must be at least {{ bookingCodeMinLength }} characters
+    </p>
+
+    <p
+      class="form-error-message"
+      *ngIf="bookingCodeControlErrors?.['maxlength']"
+    >
+      Booking code may not exceed {{ bookingCodeMaxLength }} characters
+    </p>
+
+    <p class="form-error-message" *ngIf="bookingCodeControlErrors?.['pattern']">
+      The booking code can only contain alphabetical characters and numbers
+      between 2-9
+    </p>
+  </label>
+
+  <label>
+    Family name
+    <input type="text" formControlName="familyName" />
+
+    <p
+      class="form-error-message"
+      *ngIf="familyNameControlErrors?.['minlength']"
+    >
+      Family name must be at least {{ familyNameMinLength }} characters
+    </p>
+
+    <p
+      class="form-error-message"
+      *ngIf="familyNameControlErrors?.['maxlength']"
+    >
+      Booking code may not exceed {{ familyNameMaxLength }} characters
+    </p>
+  </label>
+
+  <button type="submit" [disabled]="retrieveBookingForm.invalid">
+    Retrieve booking
+  </button>
+</form>

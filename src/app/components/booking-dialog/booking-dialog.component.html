@@ -1,0 +1,32 @@
+<h3><strong>From:</strong></h3>
+<p>
+  {{ data.itinerary.connections[0].origin.name }},
+  {{ data.itinerary.connections[0].origin.city.name }}<br />
+  ({{ data.itinerary.connections[0].origin.city.IATACode }})<br />
+  {{
+    data.itinerary.connections[0].segments[0].marketingFlight.operatingFlight
+      .scheduledDeparture | date: 'EEE d MMM'
+  }}<br />
+  {{
+    data.itinerary.connections[0].segments[0].marketingFlight.operatingFlight
+      .scheduledDeparture | date: 'h:mm'
+  }}
+</p>
+
+<hr />
+<br />
+
+<h3><strong>To:</strong></h3>
+<p>
+  {{ data.itinerary.connections[0].destination.name }},
+  {{ data.itinerary.connections[0].destination.city.name }}<br />
+  ({{ data.itinerary.connections[0].destination.city.IATACode }})<br />
+  {{
+    data.itinerary.connections[0].segments[0].marketingFlight.operatingFlight
+      .scheduledArrival | date: 'EEE d MMM'
+  }}<br />
+  {{
+    data.itinerary.connections[0].segments[0].marketingFlight.operatingFlight
+      .scheduledArrival | date: 'h:mm'
+  }}
+</p>
